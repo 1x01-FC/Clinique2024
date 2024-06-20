@@ -1,0 +1,297 @@
+body {
+  display: grid;
+  grid-template-areas: "headbar headbar"
+    "topbar topbar"
+    "welcomebar welcomebar"
+    "calendarbar sidebar"
+    "rdvbar rdvbar"
+    "prelevementsbar prelevementsbar"
+    "covidbar covidbar"
+    "contactbar contactbar"
+    "footerbar footerbar";
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: auto;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1 {
+  margin: 50px auto 0 auto;
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  /* color: #458CE7; */
+
+}
+
+
+.header a,
+#footer-container a {
+  color: #FEFBF3;
+  text-decoration: none;
+}
+
+.header a:hover,
+#footer-container a:hover {
+  color: white;
+  text-decoration-line: underline;
+}
+
+td {
+  padding: 0 10px;
+}
+
+p {
+  line-height: 2;
+}
+
+/*hr {
+  border-style: dotted none none;
+  height: 0;
+  width: 5%;
+  border-color: #9D9D9D;
+  border-width: 5px;
+  margin: 6rem auto;
+}
+*/
+
+hr {
+  border: dotted lightgrey 6px;
+  border-bottom: none;
+  width: 5%;
+  margin: 6rem auto;
+}
+
+#horaire {}
+
+.navbar {
+  padding: 0 7% 0 7%;
+  /* border-bottom: 1px solid #458CE7; */
+}
+
+.navbar,
+.navbar-brand,
+.navbar-nav {
+  color: #458CE7;
+  background-color: white;
+  font-size: 1.3rem;
+}
+
+
+.nav-item {
+  padding-left: 1.5rem;
+}
+
+.nav-link {
+  color: black;
+  transition: transform 0.1s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-1px)
+}
+
+.navbar-brand {
+  font-size: 2.2rem;
+  transition: transform 0.1s ease;
+}
+
+.navbar-brand:hover {
+  color: #68a5f5;
+}
+
+.copyright {
+  color: white;
+  font-size: 0.7rem;
+}
+
+.header-container {
+  grid-area: headbar;
+}
+
+.top-container {
+  position: relative;
+  color: rgb(70, 70, 70);
+  font-size: 1.5rem;
+  grid-area: topbar;
+}
+
+.top-container h2 {
+  color: rgb(70, 70, 70);
+  font-weight: 700;
+  font-size: 3.1rem;
+}
+
+.stethoscope {
+  width: 100%;
+  /* margin: 0 -10%; */
+}
+
+.stethoscope-text {
+  position: absolute;
+  top: 11rem;
+  left: 8rem;
+}
+
+#welcome-container {
+  display: flex;
+  align-items: end;
+  grid-area: welcomebar;
+}
+
+#calendar-container {
+  display: flex;
+  flex-direction: column;
+  grid-area: calendarbar;
+}
+
+#rdv-container {
+  grid-area: rdvbar;
+}
+
+#prelevements-container {
+  grid-area: prelevementsbar;
+}
+
+#prelevements-container a {}
+
+#covid-container {
+  grid-area: covidbar;
+}
+
+#contact-container {
+  grid-area: contactbar;
+}
+
+#footer-container {
+  background-color: #458CE7;
+  text-align: center;
+  grid-area: footerbar;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  height: auto;
+  background-color: #458CE7;
+  color: white;
+  line-height: 1.5;
+  padding: 1px 7%;
+  height: 1.7rem;
+}
+
+
+/* .menu {
+  background-color: #F8F0DF;
+  height: 160px;
+} */
+
+
+.doctor-img {
+  width: 15%;
+  float: left;
+  margin-left: 30px;
+}
+
+.second-img {
+  width: 25%;
+  float: right;
+  margin-left: 30px;
+  border-radius: 30%;
+}
+
+.profile {
+  width: 30%;
+  margin: 4rem auto;
+  line-height: 2;
+}
+
+
+
+.contact-me {
+  padding: 1rem;
+  width: 50%;
+  margin: 4rem auto;
+  line-height: 2;
+}
+
+.btn {
+  background: #95d4d6;
+  background-image: -webkit-linear-gradient(top, #95d4d6, #549799);
+  background-image: -moz-linear-gradient(top, #95d4d6, #549799);
+  background-image: -ms-linear-gradient(top, #95d4d6, #549799);
+  background-image: -o-linear-gradient(top, #95d4d6, #549799);
+  background-image: linear-gradient(to bottom, #95d4d6, #549799);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #FEFBF3;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-top: 2rem;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #77c2c2;
+  background-image: -webkit-linear-gradient(top, #77c2c2, #467d7d);
+  background-image: -moz-linear-gradient(top, #77c2c2, #467d7d);
+  background-image: -ms-linear-gradient(top, #77c2c2, #467d7d);
+  background-image: -o-linear-gradient(top, #77c2c2, #467d7d);
+  background-image: linear-gradient(to bottom, #77c2c2, #467d7d);
+  text-decoration: none;
+}
+
+.footer-link {
+  width: 50%;
+  padding: 1rem;
+  line-height: 3;
+}
+
+.topper {
+  width: 50%;
+}
+
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.corona-msg p {
+  line-height: 1.5;
+}
+
+.corona-msg {
+  background-color: #458CE7;
+  color: white;
+}
+
+.alert-msg {
+  color: red;
+}
+
+.vaccineoptions {
+  margin-left: 3rem;
+}
+
+.h2bold {
+  font-weight: bold;
+}
+
+.container-crop {
+  padding: 3rem 8rem;
+}
+
+.container-wide {
+  padding: 3rem 8rem;
+  background-color: rgb(218, 240, 255);
+}
