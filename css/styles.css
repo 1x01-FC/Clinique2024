@@ -2,17 +2,15 @@ body {
   display: grid;
   grid-template-areas: "headbar headbar"
     "topbar topbar"
-    "welcomebar welcomebar"
-    "calendarbar sidebar"
+    "welcomebar sidebar"
+    "calendarbar calendarbar"
     "rdvbar rdvbar"
     "prelevementsbar prelevementsbar"
     "covidbar covidbar"
     "contactbar contactbar"
     "footerbar footerbar";
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr auto;
   grid-template-rows: auto;
-  margin: 0;
-  padding: 0;
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
 
@@ -26,8 +24,58 @@ h1 {
 h2 {
   font-size: 2.5rem;
   font-weight: normal;
-  /* color: #458CE7; */
+}
 
+ul {
+  list-style-type: none;
+}
+
+#welcome-container {
+  grid-area: welcomebar;
+  margin-right: -15rem;
+  margin-bottom: 15rem;
+}
+
+.welcome-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* padding-right: 10rem; */
+}
+
+.doctor-img {
+  width: 10rem;
+  margin-right: 2rem;
+}
+
+#calendar-container {
+  grid-area: calendarbar;
+  margin-top: -15rem;
+}
+
+#rdv-container {
+  grid-area: rdvbar;
+}
+
+#prelevements-container {
+  grid-area: prelevementsbar;
+  margin-bottom: -3rem;
+}
+
+#covid-container {
+  grid-area: covidbar;
+}
+
+#contact-container {
+  grid-area: contactbar;
+}
+
+#footer-container {
+  background-color: #243d5b;
+  text-align: center;
+  grid-area: footerbar;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 
@@ -43,42 +91,14 @@ h2 {
   text-decoration-line: underline;
 }
 
-td {
-  padding: 0 10px;
-}
-
-p {
-  line-height: 2;
-}
-
-/*hr {
-  border-style: dotted none none;
-  height: 0;
-  width: 5%;
-  border-color: #9D9D9D;
-  border-width: 5px;
-  margin: 6rem auto;
-}
-*/
-
-hr {
-  border: dotted lightgrey 6px;
-  border-bottom: none;
-  width: 5%;
-  margin: 6rem auto;
-}
-
-#horaire {}
-
 .navbar {
-  padding: 0 7% 0 7%;
-  /* border-bottom: 1px solid #458CE7; */
+  padding: 0 8% 0 7%;
 }
 
 .navbar,
 .navbar-brand,
 .navbar-nav {
-  color: #458CE7;
+  color: #243d5b;
   background-color: white;
   font-size: 1.3rem;
 }
@@ -89,12 +109,13 @@ hr {
 }
 
 .nav-link {
-  color: black;
+  color: #243d5b;
   transition: transform 0.1s ease;
 }
 
 .nav-link:hover {
-  transform: translateY(-1px)
+  transform: translateY(-1px);
+  color: #657d9b
 }
 
 .navbar-brand {
@@ -103,7 +124,7 @@ hr {
 }
 
 .navbar-brand:hover {
-  color: #68a5f5;
+  color: #657d9b;
 }
 
 .copyright {
@@ -130,49 +151,12 @@ hr {
 
 .stethoscope {
   width: 100%;
-  /* margin: 0 -10%; */
 }
 
 .stethoscope-text {
   position: absolute;
-  top: 11rem;
+  top: 12rem;
   left: 8rem;
-}
-
-#welcome-container {
-  display: flex;
-  align-items: end;
-  grid-area: welcomebar;
-}
-
-#calendar-container {
-  display: flex;
-  flex-direction: column;
-  grid-area: calendarbar;
-}
-
-#rdv-container {
-  grid-area: rdvbar;
-}
-
-#prelevements-container {
-  grid-area: prelevementsbar;
-}
-
-#prelevements-container a {}
-
-#covid-container {
-  grid-area: covidbar;
-}
-
-#contact-container {
-  grid-area: contactbar;
-}
-
-#footer-container {
-  background-color: #458CE7;
-  text-align: center;
-  grid-area: footerbar;
 }
 
 .header {
@@ -180,111 +164,35 @@ hr {
   justify-content: space-between;
   align-items: top;
   height: auto;
-  background-color: #458CE7;
+  background-color: #243d5b;
   color: white;
   line-height: 1.5;
   padding: 1px 7%;
   height: 1.7rem;
 }
 
-
-/* .menu {
-  background-color: #F8F0DF;
-  height: 160px;
-} */
-
-
-.doctor-img {
-  width: 15%;
-  float: left;
-  margin-left: 30px;
+.covid-msg {
+  background-color: #458CE7;
+  color: white;
+  padding: 0 1rem;
+  padding-top: 1rem;
+  border: solid 3px black;
 }
 
-.second-img {
-  width: 25%;
-  float: right;
-  margin-left: 30px;
-  border-radius: 30%;
-}
-
-.profile {
-  width: 30%;
-  margin: 4rem auto;
-  line-height: 2;
-}
-
-
-
-.contact-me {
-  padding: 1rem;
-  width: 50%;
-  margin: 4rem auto;
-  line-height: 2;
-}
-
-.btn {
-  background: #95d4d6;
-  background-image: -webkit-linear-gradient(top, #95d4d6, #549799);
-  background-image: -moz-linear-gradient(top, #95d4d6, #549799);
-  background-image: -ms-linear-gradient(top, #95d4d6, #549799);
-  background-image: -o-linear-gradient(top, #95d4d6, #549799);
-  background-image: linear-gradient(to bottom, #95d4d6, #549799);
-  -webkit-border-radius: 8;
-  -moz-border-radius: 8;
-  border-radius: 8px;
-  font-family: Arial;
-  color: #FEFBF3;
-  font-size: 15px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-  margin-top: 2rem;
-  display: inline-block;
-}
-
-.btn:hover {
-  background: #77c2c2;
-  background-image: -webkit-linear-gradient(top, #77c2c2, #467d7d);
-  background-image: -moz-linear-gradient(top, #77c2c2, #467d7d);
-  background-image: -ms-linear-gradient(top, #77c2c2, #467d7d);
-  background-image: -o-linear-gradient(top, #77c2c2, #467d7d);
-  background-image: linear-gradient(to bottom, #77c2c2, #467d7d);
-  text-decoration: none;
-}
-
-.footer-link {
-  width: 50%;
-  padding: 1rem;
-  line-height: 3;
-}
-
-.topper {
-  width: 50%;
-}
-
-
-.sidebar {
-  grid-area: sidebar;
-}
-
-.corona-msg p {
+.covid-msg p {
   line-height: 1.5;
 }
 
-.corona-msg {
-  background-color: #458CE7;
+.covid-msg a {
   color: white;
 }
 
-.alert-msg {
-  color: red;
+.red-msg {
+  color: rgb(217, 69, 69);
 }
 
 .vaccineoptions {
   margin-left: 3rem;
-}
-
-.h2bold {
-  font-weight: bold;
 }
 
 .container-crop {
@@ -294,4 +202,72 @@ hr {
 .container-wide {
   padding: 3rem 8rem;
   background-color: rgb(218, 240, 255);
+}
+
+.container-txt {
+  width: 84%;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 38rem;
+  background-color: white;
+  border: solid 1px black;
+}
+
+.contact-card iframe {
+  border-left: solid 1px black;
+}
+
+.contact-card-txt {
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 19rem;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  position: sticky;
+  top: 30%;
+  right: 1rem;
+  align-self: start;
+  background-color: #243d5b;
+  color: white;
+  width: 14rem;
+  z-index: 100;
+  border-radius: 0.8rem;
+  padding-top: 2.8rem;
+  margin-top: 1.3rem;
+  box-shadow: 13px 13px 1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: bold;
+  opacity: 95%;
+}
+
+.nav-link-side {
+  color: white;
+  text-decoration: none;
+  font-size: larger;
+}
+
+.nav-link-side:hover {
+  color: rgb(217, 216, 247);
+}
+
+.sidebar>ul {
+  padding-left: 0;
+}
+
+.sidebar>ul>li {
+  padding-bottom: 2rem;
 }

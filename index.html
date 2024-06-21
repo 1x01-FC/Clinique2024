@@ -35,13 +35,13 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#welcome-container">Page d'accueil</a>
+            <a class="nav-link" href="#welcome-container">Accueil</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#calendar-container">Horaire</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#rendezvous-container">Rendez-vous</a>
+            <a class="nav-link" href="#rdv-container">Rendez-vous</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#prelevements-container">Prélèvements</a>
@@ -64,114 +64,148 @@
   </div>
 
   <div id="welcome-container" class="container-wide">
-    <span>
-      <h2>Bienvenue!</h2>
-      <p>Bienvenue à la clinique médicale du Dr Tri C. Nguyen, médecin de famille à Laval depuis plus de 20 ans.</p>
-    </span>
-    <img class="doctor-img" src="images/doctor-profile-flipped.png" alt="doctor-img">
+    <div class="container-txt welcome-content">
+      <img class="doctor-img" src="images/doctor-profile.png" alt="doctor-img">
+      <span class="welcome-txt">
+        <h2>Bienvenue!</h2>
+        <p>Bienvenue à la clinique médicale du Dr Tri C. Nguyen, médecin de famille à Laval depuis plus de 20 ans.</p>
+      </span>
+
+    </div>
   </div>
 
   <div id="calendar-container" class="container-crop">
-    <h2 class="h2bold">Horaire</h2>
+    <h2><strong>📅 Horaire</strong></h2>
     <iframe
       src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FToronto&bgcolor=%23ffffff&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=NjU3ODhmZGQyMTAzM2M1NTY1YWMwZmUzN2Q0YmE5M2Q2NDg4ZmJjYTdkMmJiMjExZWUxNDBhODA1YmEyNGE0OEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YmFiY2Y3NzY5NWE3ZmVlYTVmZjFmYzcwZGExZGQ0N2UxM2IwNTUxZWNmYjYyNzA4ODJkYTQyM2I3ZjdlZmQ5M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NzY0OTZlZWViYzk0NGFkZjk5NTMzMjc2YzQ0YWE1ZTkxZWU0MDM4NjY2N2FjOTRlNzZlYjkyZDJhNGI1ZmRjNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23616161&color=%23D50000&color=%234285F4&hl=fr"
-      style="border:solid 1px #777" width="800px" height="600px" frameborder="0" scrolling="no"></iframe>
+      style="border:solid 1px #777" width="85%" height="500px" frameborder="0" scrolling="no"></iframe>
   </div>
   <div id="rdv-container" class="container-wide">
-    <h2>🗓️ Pour prendre rendez-vous:</h2>
-    <h3>➜ appelez au <a href="tel:+14509784803">450-978-4803</a><br>
-      ➜ les lundis et mercredis entre 1:00PM-3:00PM. <br><br>
-      Veuillez noter qu'il n'est pas possible de prendre rendez-vous avec Dr Tri Nguyen à travers RVSQ.
-    </h3>
-    <h3 style="color:rgb(217, 69, 69);"> Si le médecin (Dr Tri Nguyen) est non disponible ou en congé, vous pouvez
-      consulter le site
-      <a href="https://www.rvsq.gouv.qc.ca/fr/public/Pages/accueil.aspx">RVSQ</a>
-      (Rendez-Vous Santé Québec): pour
-      avoir un rendez-vous avec un <b>AUTRE</b> médecin disponible de votre région.
-    </h3>
+    <div class="container-txt">
+      <h2><strong>🗓️ Pour prendre rendez-vous:</strong></h2> <br>
+      <h3>➜ appelez au <a href="tel:+14509784803">450-978-4803</a> les <strong>lundis</strong> et
+        <strong>mercredis</strong> entre <strong>1:00PM</strong> et <strong>3:00PM</strong>.
+      </h3> <br>
+      <h4><em>Veuillez noter qu'il n'est pas possible de prendre rendez-vous avec Dr Tri Nguyen à travers RVSQ.</em>
+      </h4><br>
+      <h4 class="red-msg"> Si le médecin (Dr Tri Nguyen) est non disponible ou en congé, vous pouvez
+        consulter le site
+        <a href="https://www.rvsq.gouv.qc.ca/fr/public/Pages/accueil.aspx">RVSQ</a>
+        (Rendez-Vous Santé Québec) pour
+        avoir un rendez-vous avec un <strong>AUTRE</strong> médecin disponible de votre région.
+      </h4>
+    </div>
   </div>
   <div id="prelevements-container" class="container-crop">
-    <h2>🧪 Lieux de prélèvements:</h2>
+    <h2><strong>🧪 Lieux de prélèvements:</strong></h2>
     <a href="https://www.lavalensante.com">
-      <h3>Prélèvements: CISSS de Laval (lavalensante.com)</h3>
+      <h4>Prélèvements: CISSS de Laval (lavalensante.com)</h4>
     </a>
   </div>
-
   <div id="covid-container" class="container-crop">
-    <div class="corona-msg">
-      <h3>Coronavirus (COVID-19): des services spécifiques ont été mis en place
-        pour répondre à vos besoins!</h3>
-      <p>Vous présentez des symptômes d'allure grippale, de gastroentérite ou
-        s'apparentant à la COVID-19? Veuillez <b>ne pas prendre de rendez-vous
-          à l'aide de Rendez-vous santé Québec.</b> À la place, téléphonez au <b>1
-          877 644-4545</b> (sans frais). Un intervenant vous indiquera la marche à
-        suivre selon votre situation et vous dirigera vers la bonne
-        ressource.</p>
-      <p>Si vous ne présentez pas de symptomes, vous pouvez obtenir un
-        rendez-vous à l'aide de Rendez-vous santé Québec. Notez que celui-ci
-        sera <b>téléphonique</b>, à moins d'un avis contraire de votre clinique.</p>
-      <p>Pour toutes les informations concernant le coronavirus, visitez
-        <a href="Québec.ca/coronavirus">Québec.ca/coronavirus.</a>
-      </p>
-    </div>
-    <h2>💉 COVID-19: Information générale pour la campagne de vaccination</h2>
-    <h3 class="alert-msg">Vaccin COVID-19
-      Les adultes, selon leur groupe d'âge et leur journée désignée, peuvent prendre un rendez-vous pour la
-      vaccination contre la COVID-19 à travers une des 3 options
-      suivantes:</h3><br>
-    <h3 class="vaccineoptions">
-      • en composant le <a href="tel:+18776444545">1-877-644-4545</a><br>
-      • en consultant <a
-        href="https://www.quebec.ca/sante/problemes-de-sante/a-z/coronavirus-2019/deroulement-vaccination-contre-la-covid-19/?gc;od=EAlalQobChMlwNKw5OCA7wlVlpOzCh1ERAe-EAAYAiAAEgLLLLsiPD_BwE">le
-        site de Santé Québec</a><br>
-      • en cliquant sur <a href="https://portal3.clicsante.ca/">Clic Santé</a>
-      pour le lien de rendez-vous direct
-    </h3>
-    <br>
-
-    <!-- <h3 class="alert-msg">Opération Vaccination Covid-19:</h3>
+    <div class="container-txt">
+      <h2><strong>💉 COVID-19: Information générale pour la campagne de vaccination</strong></h2>
+      <h3 class="red-msg"><strong>Vaccin COVID-19</strong></h3>
+      <h4 class="red-msg">Les adultes, selon leur groupe d'âge et leur journée désignée, peuvent prendre un rendez-vous
+        pour la
+        vaccination contre la COVID-19 à travers une des 3 options
+        suivantes:</h4>
+      <h4 class="vaccineoptions">
+        • en composant le <a href="tel:+18776444545">1-877-644-4545</a><br>
+        • en consultant <a
+          href="https://www.quebec.ca/sante/problemes-de-sante/a-z/coronavirus-2019/deroulement-vaccination-contre-la-covid-19/?gc;od=EAlalQobChMlwNKw5OCA7wlVlpOzCh1ERAe-EAAYAiAAEgLLLLsiPD_BwE">le
+          site de Santé Québec</a><br>
+        • en cliquant sur <a href="https://portal3.clicsante.ca/">Clic Santé</a>
+        pour le lien de rendez-vous direct
+      </h4>
+      <br>
+      <div class="covid-msg">
+        <h4>Coronavirus (COVID-19): des services spécifiques ont été mis en place
+          pour répondre à vos besoins!</h4><br>
+        <p>Vous présentez des symptômes d'allure grippale, de gastroentérite ou
+          s'apparentant à la COVID-19? Veuillez <strong>ne pas prendre de rendez-vous
+            à l'aide de Rendez-vous santé Québec.</strong> À la place, téléphonez au <strong>1
+            877 644-4545</strong> (sans frais). Un intervenant vous indiquera la marche à
+          suivre selon votre situation et vous dirigera vers la bonne
+          ressource.</p>
+        <p>Si vous ne présentez pas de symptômes, vous pouvez obtenir un
+          rendez-vous à l'aide de Rendez-vous santé Québec. Notez que celui-ci
+          sera <strong>téléphonique</strong>, à moins d'un avis contraire de votre clinique.</p>
+        <p>Pour toutes les informations concernant le coronavirus, visitez
+          <a href="http://www.québec.ca/coronavirus">Québec.ca/coronavirus.</a>
+        </p>
+      </div>
+      <div style="text-align: center;">
+        <a href="http://www.québec.ca/coronavirus">Québec.ca/coronavirus</a>
+      </div>
+      <!-- <h3 class="alert-msg">Opération Vaccination Covid-19:</h3>
     <p>Veuillez consulter les liens ci-dessous.<br>
       • <a href="">Tableaux: Rang de priorité (1 à 12)</a><br>
       • <a href="">Groupe par ordre de priorité: Personnes faisant parties</a></p> -->
+    </div>
   </div>
-
   <div id="contact-container" class="container-wide">
-    <h2>Nous Joindre</h2>
-    <h3>Pour un rendez-vous, vous devez nous rejoindre par téléphone les lundis et mercredis entre 1pm et 3pm au
-      <a href="tel:+14509784803">450-978-4803</a>.
-    </h3>
-    <h3>
-      Clinique Tri Nguyen <br>
-      93 Boulevard Clermont, <br>
-      Laval, Quebec, H7N 2Z5 <br>
-      Tél: 450-978-4803 <br>
-      Fax: 450-978-4803
-    </h3>
-    <p><b>S'il-vous-plaît utiliser ce courriel uniquement pour nous transmettre des documents à ajouter dans votre dossier
-      personnel:</b></p>
-    📧cliniquetringuyen@hotmail.com
-    Veuillez noter qu'il n'est pas possible de prendre rendez-vous par courriel.
-
-    <div class="contact-me">
-
-      <a class="btn" href="mailto:toonvesper@gmail.com">Nous Joindre</a>
+    <div class="container-txt">
+      <h2><strong>📞 Nous Joindre</strong></h2>
+      <h4>Pour un rendez-vous, vous devez nous joindre par téléphone les
+        lundis et mercredis entre 1:00PM et 3:00PM au
+        <a href="tel:+14509784803">450-978-4803</a>.
+      </h4>
+      <br>
+      <div class="contact-card">
+        <div>
+          <div class="contact-card-txt">
+            <h3>
+              <strong>Clinique Tri Nguyen</strong>
+            </h3>
+            <h4>93 Boulevard Clermont, <br>
+              Laval, Quebec, H7N 2Z5 <br>
+              Tél.: 450-978-4803 <br>
+              Fax: 450-978-4803
+            </h4>
+          </div>
+        </div>
+        <iframe
+          src="https://maps.google.com/maps?q=93%20boulevard%20clermont%20&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
+          frameborder="0" marginwidth="0" marginheight="0" scrolling="no" aria-label="93 boulevard clermont "></iframe>
+      </div>
+      <br>
+      <strong>
+        <p>S'il-vous-plaît utiliser ce courriel uniquement pour nous transmettre des documents à ajouter dans votre
+          dossier
+          personnel:</p>
+        <div class="email">
+          <h2>📧</h2><a href="mailto:cliniquetringuyen@hotmail.com">cliniquetringuyen@hotmail.com</a>
+        </div>
+        <p class="red-msg">Veuillez noter qu'il n'est pas possible de prendre rendez-vous par courriel.
+        </p>
+      </strong>
     </div>
   </div>
 
 
-
-  <div id="footer-container" class="container-crop">
-    <a class="footer-link" href="https://www.cliniquetringuyen.com">Accueil</a>
+  <div id="footer-container">
     <p class="copyright">© 2024 Clinique Tri Nguyen</p>
   </div>
 
   <div class="sidebar">
-    <h3>Nous joindre</h3>
-    <p style="font-weight: bold">Clinique Tri Nguyen</p>
-    <p style="line-height: 1rem; text-align: left;">93 Boulevard Clermont,<br>
-      Laval, Quebec, H7N 2Z5<br>
-      Tél: 450-978-4803<br>
-      Fax: 450-978-4803</p>
+    <ul>
+      <li>
+        <a class="nav-link-side" href="#welcome-container">Accueil</a>
+      </li>
+      <li>
+        <a class="nav-link-side" href="#calendar-container">Horaire</a>
+      </li>
+      <li>
+        <a class="nav-link-side" href="#rdv-container">Rendez-vous</a>
+      </li>
+      <li>
+        <a class="nav-link-side" href="#prelevements-container">Prélèvements</a>
+      </li>
+      <li>
+        <a class="nav-link-side" href="#contact-container">Nous joindre</a>
+      </li>
+    </ul>
   </div>
 
   <script type="text/javascript">
